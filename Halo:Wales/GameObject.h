@@ -11,7 +11,6 @@
 
 @interface GameObject : CCNode 
 {
-    CCNode *parent;
     NSMutableDictionary *animations;
     NSMutableDictionary *actions;
     
@@ -22,7 +21,7 @@
 
 @property (nonatomic, strong) CCSprite *sprite;
 
--(void) setUpOnNode:(CCNode *)node;
+-(void) setUp;
 
 -(void) registerSprite;
 -(void) registerAnimations;

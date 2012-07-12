@@ -15,10 +15,8 @@
 
 #pragma mark Setup and Register
 
--(void) setUpOnNode:(CCNode *)node
-{    
-    parent = node;
-    
+-(void) setUp
+{        
     #warning implement these values to set up your game objects
     spriteFrameFile = @"";
     spriteBatchNodeFile = @"";
@@ -52,7 +50,12 @@
     
     for( int i = startFrame ; i <= endFrame ; i++ )
     {
-        [frameArray addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:frameNameFormat, i]]];
+        NSString *twentyNineCheck = [NSString stringWithFormat:frameNameFormat, i];
+        
+        if( ![twentyNineCheck isEqualToString:@"29.png"] )
+        {
+            [frameArray addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:twentyNineCheck]];
+        }
     }
     
     CCAnimation *createdAnimation = [CCAnimation animationWithFrames:frameArray delay:delay];

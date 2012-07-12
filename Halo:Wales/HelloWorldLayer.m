@@ -18,6 +18,10 @@
 {
 	// 'scene' is an autorelease object.
 	CCScene *scene = [CCScene node];
+    
+    CCLayerColor *collay = [CCLayerColor layerWithColor:ccc4(162, 215, 250, 255)];
+    
+    [scene addChild:collay];
 	
 	// 'layer' is an autorelease object.
 	HelloWorldLayer *layer = [HelloWorldLayer node];
@@ -34,25 +38,17 @@
 {
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super" return value
-	if( (self=[super init])) {
-		
-		// create and initialize a Label
-		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
+	if( (self=[super init])) 
+    {
 
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
-	
-		// position the label on the center of the screen
-		label.position =  ccp( size.width /2 , size.height/2 );
-		
-		// add the label as a child to this Layer
-		[self addChild: label];
         
         MasterChief *masterChief = [MasterChief node];
-        [masterChief setUpOnNode:self];
+        [masterChief setUp];
         
-        masterChief.position = ccp( size.width /2 , size.height/2 );
-        [self addChild:masterChief];
+        masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
+        [self addChild:masterChief.sprite];
         
         [masterChief run];
 	}
