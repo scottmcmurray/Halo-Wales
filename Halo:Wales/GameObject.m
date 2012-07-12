@@ -62,7 +62,7 @@
 	id flipObject = [CCFlipX actionWithFlipX: flip];
 	id moveObject = [CCMoveTo actionWithDuration: 2.0f position:ccp(position.x, 60.0f)];
 
-	id action = [CCSequence	actions:flipObject, moveObject, [[self->currentlyRunningActions objectForKey:@"MasterChiefRunning"] stop ], nil];
+	id action = [CCSequence	actions:flipObject, moveObject, nil];
 	
 	[self.sprite runAction:action];
 }

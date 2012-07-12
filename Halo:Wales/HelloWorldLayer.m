@@ -40,7 +40,7 @@
 	CGPoint location = [touch locationInView:[touch view]];
 	location = [[CCDirector sharedDirector] convertToGL:location];
 	
-	//[masterChief moveAlongGroundToPosition: location.x];
+	[masterChief moveAlongGroundToPosition: location.x];
 }
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
