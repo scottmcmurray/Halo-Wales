@@ -15,12 +15,12 @@
 {    
     spriteFrameFile = @"halo.plist";
     spriteBatchNodeFile = @"halo.png";
-    spriteInitialFrameName = @"13.png";
+    spriteInitialFrameName = @"024.png";
     [self registerSprite];
     
     self->animations = [NSMutableDictionary dictionaryWithCapacity:1];
     
-    CCAnimation *runningAnimation = [self createAnimationFrom:13 to:33 with:@"%i.png" andDelay:0.1f];
+    CCAnimation *runningAnimation = [self createAnimationFrom:24 to:33 with:@"%03i.png" andDelay:0.1f];
     [self->animations setObject:runningAnimation forKey:@"MasterChiefRunning"];
     
     [self registerAnimations];
