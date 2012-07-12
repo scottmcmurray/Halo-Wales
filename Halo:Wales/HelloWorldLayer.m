@@ -9,6 +9,8 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
+#import "MasterChief.h"
+#import "Sheep.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -73,7 +75,14 @@
         masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
         [self addChild:masterChief.sprite];
         [masterChief run];
+        
 		[masterChief retain];
+		
+        Sheep *sheep = [Sheep node];
+        [sheep setUp];
+        sheep.sprite.position = ccp( size.width /3 , size.height/3 );
+        [self addChild:sheep.sprite];
+        [sheep roamRight];
 	}
 	return self;
 }
