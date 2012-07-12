@@ -38,24 +38,17 @@
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:[touch view]];
-	//NSLog(@"touch (%g,%g)", location.x, location.y);
 	location = [[CCDirector sharedDirector] convertToGL:location];
-	NSLog(@"touch (%g,%g)", location.x, 60.0f);
 	
-	[masterChief moveToPosition: location];
-	//[masterChief moveToPosition: CGPointMake(10.0f, 10.0f)];
-	//CGSize size = [[CCDirector sharedDirector] winSize];
+	//[masterChief moveAlongGroundToPosition: location.x];
 }
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:[touch view]];
-	//NSLog(@"touch (%g,%g)", location.x, location.y);
-	location = [[CCDirector sharedDirector] convertToGL:location];
-	NSLog(@"moved (%g,%g)", location.x, location.y);
-	
-	}
+	location = [[CCDirector sharedDirector] convertToGL:location];	
+}
 
 
 // on "init" you need to initialize your instance

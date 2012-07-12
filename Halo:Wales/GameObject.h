@@ -13,6 +13,7 @@
 {
     NSMutableDictionary *animations;
     NSMutableDictionary *actions;
+	NSMutableDictionary *currentlyRunningActions;
     
     NSString *spriteFrameFile;
     NSString *spriteBatchNodeFile;
@@ -26,6 +27,7 @@
 -(void) registerSprite;
 -(void) registerAnimations;
 -(void) moveToPosition: (CGPoint) position;
+-(void) moveAlongGroundToPosition: (CGFloat) xPos;
 
 -(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
 -(void) setAnimationWithIdentifer:(NSString *)identifier;

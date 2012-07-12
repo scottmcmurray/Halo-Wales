@@ -33,31 +33,11 @@
 
 -(void) stopRunning
 {
-	[self.sprite cleanup];
-}
-
--(void) moveToPosition: (CGPoint) position
-{	
-//	id stopRunning = [self stopRunning];
+//	[self.sprite cleanup];
 	
-	BOOL flip;
+	//[[self->currentlyRunningActions objectForKey:@"MasterChiefRunning"] stop ];
 	
-	if( self.sprite.position.x > position.x )
-	{
-		flip = YES;
-	}
-	else 
-	{
-		flip = NO;
-	}
-	
-	id moveMan = [CCMoveTo actionWithDuration: 2.0f position:ccp(position.x, 60.0f)];
-	id flipMan = [CCFlipX actionWithFlipX: flip];
-	id action = [CCSequence	actions:flipMan, moveMan, nil];
-	
-	[self.sprite runAction:action];
-	
-	//self.sprite.position = ccp( position.x, 60.0f );
+//	[self.sprite stopActionByTag: [self->currentlyRunningActions objectForKey: @"MasterChiefRunning" ].tag];
 }
 
 @end
