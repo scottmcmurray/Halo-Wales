@@ -49,7 +49,10 @@
 		[self addChild: label];
         
         MasterChief *masterChief = [MasterChief node];
-        [masterChief setUp];
+        [masterChief setUpOnNode:self];
+        
+        masterChief.position = ccp( size.width /2 , size.height/2 );
+        [self addChild:masterChief];
         
         [masterChief run];
 	}

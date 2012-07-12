@@ -15,8 +15,10 @@
 
 #pragma mark Setup and Register
 
--(void) setUp
+-(void) setUpOnNode:(CCNode *)node
 {    
+    parent = node;
+    
     #warning implement these values to set up your game objects
     spriteFrameFile = @"";
     spriteBatchNodeFile = @"";
@@ -31,7 +33,7 @@
 {
     // add the sprite frames information to the shared caches
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:spriteFrameFile];
-    [self addChild:[CCSpriteBatchNode batchNodeWithFile:spriteBatchNodeFile]];
+    [self.parent addChild:[CCSpriteBatchNode batchNodeWithFile:spriteBatchNodeFile]];
     
     self.sprite = [CCSprite spriteWithSpriteFrameName:spriteInitialFrameName];
 }
@@ -50,7 +52,7 @@
     
     for( int i = startFrame ; i <= endFrame ; i++ )
     {
-        [frameArray addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:frameNameFormat]];
+        [frameArray addObject:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:frameNameFormat, i]]];
     }
     
     CCAnimation *createdAnimation = [CCAnimation animationWithFrames:frameArray delay:delay];

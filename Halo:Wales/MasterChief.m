@@ -11,14 +11,20 @@
 
 @implementation MasterChief
 
--(void) setUp
+-(void) setUpOnNode:(CCNode *)node
 {
-    spriteFrameFile = @"Resources/halo.plist";
-    spriteBatchNodeFile = @"Resources/halo.png";
+    parent = node;
+    
+    spriteFrameFile = @"halo.plist";
+    spriteBatchNodeFile = @"halo.png";
     spriteInitialFrameName = @"16.png";
     [self registerSprite];
     
-    [self createAnimationFrom:16 to:26 with:@"MasterChiefRunning" andDelay:0.05f];
+    self->animations = [NSMutableDictionary dictionaryWithCapacity:1];
+    
+    CCAnimation *runningAnimation = [self createAnimationFrom:16 to:26 with:@"%i.png" andDelay:0.05f];
+    [self->animations setObject:runningAnimation forKey:@"MasterChiefRunning"];
+    
     [self registerAnimations];
 }
 
