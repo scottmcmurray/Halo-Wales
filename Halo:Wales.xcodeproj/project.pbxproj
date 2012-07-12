@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		376F094B15AF4213001739BD /* MasterChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094A15AF4213001739BD /* MasterChief.m */; };
+		376F094E15AF42BB001739BD /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094D15AF42BB001739BD /* GameObject.m */; };
 		D2D0AE2315AF343A00518707 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2215AF343A00518707 /* QuartzCore.framework */; };
 		D2D0AE2515AF343A00518707 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2415AF343A00518707 /* OpenGLES.framework */; };
 		D2D0AE2715AF343A00518707 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2615AF343A00518707 /* OpenAL.framework */; };
@@ -127,6 +129,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		376F094915AF4213001739BD /* MasterChief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterChief.h; sourceTree = "<group>"; };
+		376F094A15AF4213001739BD /* MasterChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterChief.m; sourceTree = "<group>"; };
+		376F094C15AF42BB001739BD /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		376F094D15AF42BB001739BD /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		D2D0AE1E15AF343A00518707 /* Halo:Wales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halo:Wales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D0AE2215AF343A00518707 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D2D0AE2415AF343A00518707 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -385,6 +391,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		376F094415AF3D2C001739BD /* Game Objects */ = {
+			isa = PBXGroup;
+			children = (
+				376F094915AF4213001739BD /* MasterChief.h */,
+				376F094A15AF4213001739BD /* MasterChief.m */,
+				376F094C15AF42BB001739BD /* GameObject.h */,
+				376F094D15AF42BB001739BD /* GameObject.m */,
+			);
+			name = "Game Objects";
+			sourceTree = "<group>";
+		};
 		D2D0AE1315AF343900518707 = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +437,7 @@
 		D2D0AE3215AF343A00518707 /* Halo:Wales */ = {
 			isa = PBXGroup;
 			children = (
+				376F094415AF3D2C001739BD /* Game Objects */,
 				D2D0AF8415AF343C00518707 /* AppDelegate.h */,
 				D2D0AF8515AF343C00518707 /* AppDelegate.m */,
 				D2D0AF8715AF343C00518707 /* RootViewController.h */,
@@ -933,6 +951,8 @@
 				D2D0AF8615AF343C00518707 /* AppDelegate.m in Sources */,
 				D2D0AF8915AF343C00518707 /* RootViewController.m in Sources */,
 				D2D0AF8C15AF343C00518707 /* HelloWorldLayer.m in Sources */,
+				376F094B15AF4213001739BD /* MasterChief.m in Sources */,
+				376F094E15AF42BB001739BD /* GameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1046,7 @@
 				D2D0AF9215AF343C00518707 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
