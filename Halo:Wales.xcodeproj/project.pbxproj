@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3726214415AF6829009997CC /* halo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3726214215AF6829009997CC /* halo.plist */; };
+		3726214515AF6829009997CC /* halo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3726214315AF6829009997CC /* halo.png */; };
 		376F094B15AF4213001739BD /* MasterChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094A15AF4213001739BD /* MasterChief.m */; };
 		376F094E15AF42BB001739BD /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094D15AF42BB001739BD /* GameObject.m */; };
 		D2D0AE2315AF343A00518707 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2215AF343A00518707 /* QuartzCore.framework */; };
@@ -127,6 +129,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3726214215AF6829009997CC /* halo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = halo.plist; path = Resources/halo.plist; sourceTree = "<group>"; };
+		3726214315AF6829009997CC /* halo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = halo.png; path = Resources/halo.png; sourceTree = "<group>"; };
 		376F094915AF4213001739BD /* MasterChief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterChief.h; sourceTree = "<group>"; };
 		376F094A15AF4213001739BD /* MasterChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterChief.m; sourceTree = "<group>"; };
 		376F094C15AF42BB001739BD /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
@@ -451,7 +455,8 @@
 		D2D0AE3315AF343A00518707 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D2D0AF9715AF34CD00518707 /* sheepsheetwm6.png */,
+				3726214215AF6829009997CC /* halo.plist */,
+				3726214315AF6829009997CC /* halo.png */,
 				D2D0AE3415AF343A00518707 /* Default.png */,
 				D2D0AE3615AF343A00518707 /* fps_images.png */,
 				D2D0AE3815AF343A00518707 /* Icon-72.png */,
@@ -836,7 +841,8 @@
 				D2D0AE4115AF343A00518707 /* Icon.png in Resources */,
 				D2D0AE4315AF343A00518707 /* Icon@2x.png in Resources */,
 				D2D0AE4615AF343A00518707 /* iTunesArtwork in Resources */,
-				D2D0AF9815AF34CD00518707 /* sheepsheetwm6.png in Resources */,
+				3726214415AF6829009997CC /* halo.plist in Resources */,
+				3726214515AF6829009997CC /* halo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
