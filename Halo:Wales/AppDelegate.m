@@ -14,7 +14,7 @@
 #import "RootViewController.h"
 
 @implementation AppDelegate
-
+#test
 @synthesize window;
 
 - (void) removeStartupFlicker
