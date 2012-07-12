@@ -10,6 +10,7 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 #import "MasterChief.h"
+#import "Sheep.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -40,17 +41,20 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) 
     {
-
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
         MasterChief *masterChief = [MasterChief node];
         [masterChief setUp];
-        
         masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
         [self addChild:masterChief.sprite];
-        
         [masterChief run];
+        
+        Sheep *sheep = [Sheep node];
+        [sheep setUp];
+        sheep.sprite.position = ccp( size.width /3 , size.height/3 );
+        [self addChild:sheep.sprite];
+        [sheep roamRight];
 	}
 	return self;
 }

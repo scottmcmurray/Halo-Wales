@@ -63,4 +63,9 @@
     return createdAnimation;
 }
 
+-(void) setAnimationWithIdentifer:(NSString *)identifier
+{
+    [self.sprite runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[self->animations objectForKey:identifier]]]];
+}
+
 @end
