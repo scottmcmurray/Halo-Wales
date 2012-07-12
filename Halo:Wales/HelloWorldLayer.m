@@ -70,10 +70,8 @@
         
         masterChief = [MasterChief node];
         [masterChief setUp];
-        
         masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
         [self addChild:masterChief.sprite];
-        
         [masterChief run];
 		[masterChief retain];
 	}

@@ -28,7 +28,7 @@
 
 -(void) run
 {
-    [self.sprite runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[self->animations objectForKey:@"MasterChiefRunning"]]]];
+    [self setAnimationWithIdentifer:@"MasterChiefRunning"];
 }
 
 -(void) stopRunning

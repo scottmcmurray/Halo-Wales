@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3726214415AF6829009997CC /* halo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3726214215AF6829009997CC /* halo.plist */; };
 		3726214515AF6829009997CC /* halo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3726214315AF6829009997CC /* halo.png */; };
+		3726215A15AF87CA009997CC /* Sheep.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726215915AF87CA009997CC /* Sheep.m */; };
 		376F094B15AF4213001739BD /* MasterChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094A15AF4213001739BD /* MasterChief.m */; };
 		376F094E15AF42BB001739BD /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094D15AF42BB001739BD /* GameObject.m */; };
 		D2D0AE2315AF343A00518707 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2215AF343A00518707 /* QuartzCore.framework */; };
@@ -131,6 +132,8 @@
 /* Begin PBXFileReference section */
 		3726214215AF6829009997CC /* halo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = halo.plist; path = Resources/halo.plist; sourceTree = "<group>"; };
 		3726214315AF6829009997CC /* halo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = halo.png; path = Resources/halo.png; sourceTree = "<group>"; };
+		3726215815AF87CA009997CC /* Sheep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sheep.h; sourceTree = "<group>"; };
+		3726215915AF87CA009997CC /* Sheep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sheep.m; sourceTree = "<group>"; };
 		376F094915AF4213001739BD /* MasterChief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterChief.h; sourceTree = "<group>"; };
 		376F094A15AF4213001739BD /* MasterChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterChief.m; sourceTree = "<group>"; };
 		376F094C15AF42BB001739BD /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
@@ -398,6 +401,8 @@
 				376F094A15AF4213001739BD /* MasterChief.m */,
 				376F094C15AF42BB001739BD /* GameObject.h */,
 				376F094D15AF42BB001739BD /* GameObject.m */,
+				3726215815AF87CA009997CC /* Sheep.h */,
+				3726215915AF87CA009997CC /* Sheep.m */,
 			);
 			name = "Game Objects";
 			sourceTree = "<group>";
@@ -953,6 +958,7 @@
 				D2D0AF8C15AF343C00518707 /* HelloWorldLayer.m in Sources */,
 				376F094B15AF4213001739BD /* MasterChief.m in Sources */,
 				376F094E15AF42BB001739BD /* GameObject.m in Sources */,
+				3726215A15AF87CA009997CC /* Sheep.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
