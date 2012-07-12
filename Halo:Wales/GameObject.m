@@ -44,6 +44,11 @@
     }
 }
 
+-(void) moveToPosition: (CGPoint) position
+{	
+	self.sprite.position = ccp( position.x, 60.0f );
+}
+
 -(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
 {
     NSMutableArray *frameArray = [NSMutableArray array];

@@ -9,7 +9,6 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
-#import "MasterChief.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -33,6 +32,30 @@
 	return scene;
 }
 
+-(void) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:[touch view]];
+	//NSLog(@"touch (%g,%g)", location.x, location.y);
+	location = [[CCDirector sharedDirector] convertToGL:location];
+	NSLog(@"touch (%g,%g)", location.x, 60.0f);
+	
+	[masterChief moveToPosition: location];
+	//[masterChief moveToPosition: CGPointMake(10.0f, 10.0f)];
+	//CGSize size = [[CCDirector sharedDirector] winSize];
+}
+
+-(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+	UITouch *touch = [touches anyObject];
+	CGPoint location = [touch locationInView:[touch view]];
+	//NSLog(@"touch (%g,%g)", location.x, location.y);
+	location = [[CCDirector sharedDirector] convertToGL:location];
+	NSLog(@"moved (%g,%g)", location.x, location.y);
+	
+	}
+
+
 // on "init" you need to initialize your instance
 -(id) init
 {
@@ -40,17 +63,19 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) 
     {
+		self.isTouchEnabled = YES;
 
 		// ask director the the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
         
-        MasterChief *masterChief = [MasterChief node];
+        masterChief = [MasterChief node];
         [masterChief setUp];
         
         masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
         [self addChild:masterChief.sprite];
         
         [masterChief run];
+		[masterChief retain];
 	}
 	return self;
 }

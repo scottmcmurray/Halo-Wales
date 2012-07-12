@@ -25,6 +25,8 @@
 
 -(void) registerSprite;
 -(void) registerAnimations;
+-(void) moveToPosition: (CGPoint) position;
+
 -(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
 
 @end

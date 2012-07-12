@@ -31,4 +31,33 @@
     [self.sprite runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[self->animations objectForKey:@"MasterChiefRunning"]]]];
 }
 
+-(void) stopRunning
+{
+	[self.sprite cleanup];
+}
+
+-(void) moveToPosition: (CGPoint) position
+{	
+//	id stopRunning = [self stopRunning];
+	
+	BOOL flip;
+	
+	if( self.sprite.position.x > position.x )
+	{
+		flip = YES;
+	}
+	else 
+	{
+		flip = NO;
+	}
+	
+	id moveMan = [CCMoveTo actionWithDuration: 2.0f position:ccp(position.x, 60.0f)];
+	id flipMan = [CCFlipX actionWithFlipX: flip];
+	id action = [CCSequence	actions:flipMan, moveMan, nil];
+	
+	[self.sprite runAction:action];
+	
+	//self.sprite.position = ccp( position.x, 60.0f );
+}
+
 @end
