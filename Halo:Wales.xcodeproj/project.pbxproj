@@ -124,7 +124,6 @@
 		D2D0AF8615AF343C00518707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8515AF343C00518707 /* AppDelegate.m */; };
 		D2D0AF8915AF343C00518707 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8815AF343C00518707 /* RootViewController.m */; };
 		D2D0AF8C15AF343C00518707 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8B15AF343C00518707 /* HelloWorldLayer.m */; };
-		D2D0AF9415AF34AA00518707 /* Halo.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D0AF9315AF34AA00518707 /* Halo.png */; };
 		D2D0AF9815AF34CD00518707 /* sheepsheetwm6.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D0AF9715AF34CD00518707 /* sheepsheetwm6.png */; };
 /* End PBXBuildFile section */
 
@@ -368,7 +367,6 @@
 		D2D0AF8A15AF343C00518707 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		D2D0AF8B15AF343C00518707 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		D2D0AF8D15AF343C00518707 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		D2D0AF9315AF34AA00518707 /* Halo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Halo.png; sourceTree = "<group>"; };
 		D2D0AF9715AF34CD00518707 /* sheepsheetwm6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sheepsheetwm6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -455,8 +453,9 @@
 		D2D0AE3315AF343A00518707 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D20932B715AF4CF100AF9102 /* halo.plist */,
+				D20932B815AF4CF100AF9102 /* halo.png */,
 				D2D0AF9715AF34CD00518707 /* sheepsheetwm6.png */,
-				D2D0AF9315AF34AA00518707 /* Halo.png */,
 				D2D0AE3415AF343A00518707 /* Default.png */,
 				D2D0AE3615AF343A00518707 /* fps_images.png */,
 				D2D0AE3815AF343A00518707 /* Icon-72.png */,
@@ -841,8 +840,9 @@
 				D2D0AE4115AF343A00518707 /* Icon.png in Resources */,
 				D2D0AE4315AF343A00518707 /* Icon@2x.png in Resources */,
 				D2D0AE4615AF343A00518707 /* iTunesArtwork in Resources */,
-				D2D0AF9415AF34AA00518707 /* Halo.png in Resources */,
 				D2D0AF9815AF34CD00518707 /* sheepsheetwm6.png in Resources */,
+				D20932B915AF4CF100AF9102 /* halo.plist in Resources */,
+				D20932BA15AF4CF100AF9102 /* halo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
