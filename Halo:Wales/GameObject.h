@@ -12,17 +12,15 @@
 @interface GameObject : CCNode 
 {
     CCSprite *sprite;
-    NSMutableArray *animations;
-    NSMutableArray *actions;
+    NSMutableDictionary *animations;
+    NSMutableDictionary *actions;
     
     NSString *spriteFrameFile;
     NSString *spriteBatchNodeFile;
     NSString *spriteInitialFrameName;
 }
 
--(void) registerAssets;
 -(void) registerSprite;
 -(void) registerAnimations;
--(void) registerActions;
 
 @end
