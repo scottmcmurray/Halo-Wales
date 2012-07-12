@@ -11,7 +11,6 @@
 
 @interface GameObject : CCNode 
 {
-    CCSprite *sprite;
     NSMutableDictionary *animations;
     NSMutableDictionary *actions;
     
@@ -20,7 +19,12 @@
     NSString *spriteInitialFrameName;
 }
 
+@property (nonatomic, strong) CCSprite *sprite;
+
+-(void) setUp;
+
 -(void) registerSprite;
 -(void) registerAnimations;
+-(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
 
 @end

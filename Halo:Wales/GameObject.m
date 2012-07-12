@@ -11,10 +11,12 @@
 
 @implementation GameObject
 
+@synthesize sprite;
+
 #pragma mark Setup and Register
 
 -(void) setUp
-{
+{    
     #warning implement these values to set up your game objects
     spriteFrameFile = @"";
     spriteBatchNodeFile = @"";
@@ -31,7 +33,7 @@
     [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:spriteFrameFile];
     [self addChild:[CCSpriteBatchNode batchNodeWithFile:spriteBatchNodeFile]];
     
-    self->sprite = [CCSprite spriteWithSpriteFrameName:spriteInitialFrameName];
+    self.sprite = [CCSprite spriteWithSpriteFrameName:spriteInitialFrameName];
 }
 
 -(void) registerAnimations
@@ -42,7 +44,7 @@
     }
 }
 
--(CCAnimation *) createAnimationFrom:(int)startFrame: (int)endFrame: (NSString *)frameNameFormat: (float)delay
+-(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
 {
     NSMutableArray *frameArray = [NSMutableArray array];
     

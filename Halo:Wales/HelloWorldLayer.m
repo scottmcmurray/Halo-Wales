@@ -9,6 +9,7 @@
 
 // Import the interfaces
 #import "HelloWorldLayer.h"
+#import "MasterChief.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -46,6 +47,11 @@
 		
 		// add the label as a child to this Layer
 		[self addChild: label];
+        
+        MasterChief *masterChief = [MasterChief node];
+        [masterChief setUp];
+        
+        [masterChief run];
 	}
 	return self;
 }

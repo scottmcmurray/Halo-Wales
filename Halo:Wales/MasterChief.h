@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "GameObject.h"
 
-@interface MasterChief : CCNode 
+@interface MasterChief : GameObject 
 {
     
 }
+
+-(void) run;
 
 @end
