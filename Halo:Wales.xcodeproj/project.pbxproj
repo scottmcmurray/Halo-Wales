@@ -133,6 +133,8 @@
 		D2D0AF8C15AF343C00518707 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8B15AF343C00518707 /* HelloWorldLayer.m */; };
 		D2FC17FA15AFF77200DA00E3 /* flag.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17F815AFF77200DA00E3 /* flag.plist */; };
 		D2FC17FB15AFF77200DA00E3 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17F915AFF77200DA00E3 /* flag.png */; };
+		D2FC17FF15AFF98000DA00E3 /* 24929.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17FD15AFF98000DA00E3 /* 24929.mp3 */; };
+		D2FC180015AFF98000DA00E3 /* bubble-shield.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17FE15AFF98000DA00E3 /* bubble-shield.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -388,6 +390,8 @@
 		D2D0AF8D15AF343C00518707 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		D2FC17F815AFF77200DA00E3 /* flag.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = flag.plist; path = Resources/flag.plist; sourceTree = "<group>"; };
 		D2FC17F915AFF77200DA00E3 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flag.png; path = Resources/flag.png; sourceTree = "<group>"; };
+		D2FC17FD15AFF98000DA00E3 /* 24929.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 24929.mp3; sourceTree = "<group>"; };
+		D2FC17FE15AFF98000DA00E3 /* bubble-shield.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bubble-shield.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,6 +485,8 @@
 		D2D0AE3315AF343A00518707 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2FC17FD15AFF98000DA00E3 /* 24929.mp3 */,
+				D2FC17FE15AFF98000DA00E3 /* bubble-shield.mp3 */,
 				D2FC17F815AFF77200DA00E3 /* flag.plist */,
 				D2FC17F915AFF77200DA00E3 /* flag.png */,
 				3726215B15AFA18E009997CC /* 1x1.gif */,
@@ -875,6 +881,8 @@
 				3726215C15AFA18E009997CC /* 1x1.gif in Resources */,
 				D2FC17FA15AFF77200DA00E3 /* flag.plist in Resources */,
 				D2FC17FB15AFF77200DA00E3 /* flag.png in Resources */,
+				D2FC17FF15AFF98000DA00E3 /* 24929.mp3 in Resources */,
+				D2FC180015AFF98000DA00E3 /* bubble-shield.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
