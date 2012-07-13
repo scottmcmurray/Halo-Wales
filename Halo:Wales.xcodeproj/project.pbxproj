@@ -131,6 +131,8 @@
 		D2D0AF8615AF343C00518707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8515AF343C00518707 /* AppDelegate.m */; };
 		D2D0AF8915AF343C00518707 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8815AF343C00518707 /* RootViewController.m */; };
 		D2D0AF8C15AF343C00518707 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8B15AF343C00518707 /* HelloWorldLayer.m */; };
+		D2FC17FA15AFF77200DA00E3 /* flag.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17F815AFF77200DA00E3 /* flag.plist */; };
+		D2FC17FB15AFF77200DA00E3 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17F915AFF77200DA00E3 /* flag.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -384,6 +386,8 @@
 		D2D0AF8A15AF343C00518707 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		D2D0AF8B15AF343C00518707 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		D2D0AF8D15AF343C00518707 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		D2FC17F815AFF77200DA00E3 /* flag.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = flag.plist; path = Resources/flag.plist; sourceTree = "<group>"; };
+		D2FC17F915AFF77200DA00E3 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flag.png; path = Resources/flag.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -477,6 +481,8 @@
 		D2D0AE3315AF343A00518707 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2FC17F815AFF77200DA00E3 /* flag.plist */,
+				D2FC17F915AFF77200DA00E3 /* flag.png */,
 				3726215B15AFA18E009997CC /* 1x1.gif */,
 				3726214215AF6829009997CC /* halo.plist */,
 				3726214315AF6829009997CC /* halo.png */,
@@ -867,6 +873,8 @@
 				3726214415AF6829009997CC /* halo.plist in Resources */,
 				3726214515AF6829009997CC /* halo.png in Resources */,
 				3726215C15AFA18E009997CC /* 1x1.gif in Resources */,
+				D2FC17FA15AFF77200DA00E3 /* flag.plist in Resources */,
+				D2FC17FB15AFF77200DA00E3 /* flag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
