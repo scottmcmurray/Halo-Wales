@@ -11,7 +11,7 @@
 
 @interface BubbleShield : GameObject
 
-+(void) deployBubbleOnNode:(CCNode *)node atPoint:(int)point;
++(CCSprite *) deployBubbleOnNode:(CCNode *)node atPoint:(int)point;
 
 -(void) expand;
 

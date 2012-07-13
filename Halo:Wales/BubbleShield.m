@@ -29,7 +29,7 @@
     [self registerAnimations];
 }
 
-+(void) deployBubbleOnNode:(CCNode *)node atPoint:(int)point
++(CCSprite *) deployBubbleOnNode:(CCNode *)node atPoint:(int)point
 {
 	[[SimpleAudioEngine sharedEngine] playEffect:@"bubble-shield.mp3"];
 	
@@ -40,6 +40,8 @@
 	
 	[node addChild:bubbleShield.sprite];
     [bubbleShield expand];
+    
+    
 }
 
 -(void) expand

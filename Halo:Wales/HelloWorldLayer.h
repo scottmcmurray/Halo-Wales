@@ -25,6 +25,7 @@
 	BOOL gesturecontrol; 
     Banshee *banshee;
     FuelRod *fuelRod;
+    CCSprite *greenGrassySlopesOfTheBoyne;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

@@ -32,11 +32,6 @@
 	// add layer as a child to scene
 	[scene addChild: layer];
 
-	CCSprite *whiteSolid = [[[CCSprite alloc] init] autorelease];
-	[whiteSolid setTextureRectInPixels:CGRectMake(0, 0, 480, 49) rotated:NO untrimmedSize:CGSizeMake(480, 49)];
-	whiteSolid.position = ccp(240, 23);
-	[whiteSolid setColor:ccc3(56, 143, 69)];
-	[scene addChild: whiteSolid];
 	// return the scene
 	return scene;
 }
@@ -118,6 +113,12 @@
     
     gesturecontrol =NO;
     
+    greenGrassySlopesOfTheBoyne = [[[CCSprite alloc] init] autorelease];
+	[greenGrassySlopesOfTheBoyne setTextureRectInPixels:CGRectMake(0, 0, 480, 49) rotated:NO untrimmedSize:CGSizeMake(480, 49)];
+	greenGrassySlopesOfTheBoyne.position = ccp(240, 23);
+	[greenGrassySlopesOfTheBoyne setColor:ccc3(56, 143, 69)];
+	[self addChild: greenGrassySlopesOfTheBoyne];
+    
     leftWall = [CCSprite spriteWithFile:@"1x1.gif"];
     leftWall.scaleY = size.height;
     leftWall.scaleX = 10;
@@ -167,6 +168,8 @@
     fuelRod = [[FuelRod node] retain];
     [fuelRod setUp];
     fuelRod.sprite.position = ccp( 0, size.height-50 );
+    fuelRod.sprite.scale = 0.2f;
+    fuelRod.sprite.flipX = YES;
     [self addChild:fuelRod.sprite];
     [fuelRod fire];
 }
@@ -196,11 +199,22 @@
         Sheep *sheep = [sheeps objectAtIndex:i];
         [sheep checkIsWithinLeftBounds:[leftWall boundingBox]];
         [sheep checkIsWithinRightBounds:[rightWall boundingBox]];
+        
+        if( CGRectIntersectsRect( [fuelRod.sprite boundingBox], [sheep.sprite boundingBox] ) )
+        {
+            [self removeChild:fuelRod.sprite cleanup:YES];
+            [self removeChild:sheep.sprite cleanup:YES];
+        }
     }
     
     if( [masterChief checkForRunningAction:@"ObjectMovement"] )
     {
         [masterChief stopRunning];
+    }
+    
+    if( CGRectIntersectsRect( [fuelRod.sprite boundingBox], [greenGrassySlopesOfTheBoyne boundingBox] ) )
+    {
+        [self removeChild:fuelRod.sprite cleanup:YES];
     }
 }
 

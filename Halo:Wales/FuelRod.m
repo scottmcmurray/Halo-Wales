@@ -13,7 +13,7 @@
 
 -(void) setUp
 {
-    self->direction = @"Left";
+    self->direction = @"Right";
     
     spriteFrameFile = @"halo.plist";
     spriteBatchNodeFile = @"halo.png";
@@ -39,7 +39,7 @@
     
     float duration = 5.0f;
     
-    id moveLeft = [CCMoveTo actionWithDuration:duration position:ccp( self.sprite.position.x - 100, 70 )];
+    id moveLeft = [CCMoveTo actionWithDuration:duration position:ccp( self.sprite.position.x - 100, 60 )];
 	id action = [CCSequence	actions:moveLeft, nil];
 	
 	[self.sprite runAction:action];
@@ -51,7 +51,7 @@
     
     float duration = 5.0f;
     
-    id moveRight = [CCMoveTo actionWithDuration:duration position:ccp( self.sprite.position.x + 100, 70 )];
+    id moveRight = [CCMoveTo actionWithDuration:duration position:ccp( self.sprite.position.x + 100, 60 )];
     id action = [CCSequence	actions:moveRight, nil];
 	
 	[self.sprite runAction:action];

@@ -14,4 +14,8 @@
     
 }
 
+-(void) fire;
+-(void) fireLeft;
+-(void) fireRight;
+
 @end
