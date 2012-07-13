@@ -19,6 +19,7 @@
     spriteBatchNodeFile = @"halo.png";
     spriteInitialFrameName = @"024.png";
     [self registerSprite];
+    self.sprite.scale = 1.2f;
     
     self->animations = [NSMutableDictionary dictionaryWithCapacity:0];
     self->currentlyRunningActions = [NSMutableDictionary dictionaryWithCapacity:0];

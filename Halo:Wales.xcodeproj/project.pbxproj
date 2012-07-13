@@ -11,11 +11,10 @@
 		3726214515AF6829009997CC /* halo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3726214315AF6829009997CC /* halo.png */; };
 		3726215A15AF87CA009997CC /* Sheep.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726215915AF87CA009997CC /* Sheep.m */; };
 		3726215C15AFA18E009997CC /* 1x1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3726215B15AFA18E009997CC /* 1x1.gif */; };
+		37350F0215AFE1BA00233BE0 /* Banshee.m in Sources */ = {isa = PBXBuildFile; fileRef = 37350F0115AFE1BA00233BE0 /* Banshee.m */; };
+		37350F0615AFEDE900233BE0 /* FuelRod.m in Sources */ = {isa = PBXBuildFile; fileRef = 37350F0515AFEDE900233BE0 /* FuelRod.m */; };
 		376F094B15AF4213001739BD /* MasterChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094A15AF4213001739BD /* MasterChief.m */; };
 		376F094E15AF42BB001739BD /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094D15AF42BB001739BD /* GameObject.m */; };
-		D278CB6B15AFA3FC00EDF62D /* halo.mid in Resources */ = {isa = PBXBuildFile; fileRef = D278CB6A15AFA3FC00EDF62D /* halo.mid */; };
-		D278CB7015AFA59000EDF62D /* bubble-shield.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D278CB6F15AFA59000EDF62D /* bubble-shield.mp3 */; };
-		D278CB7215AFA6A600EDF62D /* 24929.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D278CB7115AFA6A600EDF62D /* 24929.mp3 */; };
 		D278CB7515AFAAAD00EDF62D /* BubbleShield.m in Sources */ = {isa = PBXBuildFile; fileRef = D278CB7415AFAAAD00EDF62D /* BubbleShield.m */; };
 		D2D0AE2315AF343A00518707 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2215AF343A00518707 /* QuartzCore.framework */; };
 		D2D0AE2515AF343A00518707 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2415AF343A00518707 /* OpenGLES.framework */; };
@@ -140,13 +139,14 @@
 		3726215815AF87CA009997CC /* Sheep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sheep.h; sourceTree = "<group>"; };
 		3726215915AF87CA009997CC /* Sheep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sheep.m; sourceTree = "<group>"; };
 		3726215B15AFA18E009997CC /* 1x1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 1x1.gif; sourceTree = "<group>"; };
+		37350F0015AFE1BA00233BE0 /* Banshee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banshee.h; sourceTree = "<group>"; };
+		37350F0115AFE1BA00233BE0 /* Banshee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banshee.m; sourceTree = "<group>"; };
+		37350F0415AFEDE800233BE0 /* FuelRod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuelRod.h; sourceTree = "<group>"; };
+		37350F0515AFEDE900233BE0 /* FuelRod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuelRod.m; sourceTree = "<group>"; };
 		376F094915AF4213001739BD /* MasterChief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterChief.h; sourceTree = "<group>"; };
 		376F094A15AF4213001739BD /* MasterChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterChief.m; sourceTree = "<group>"; };
 		376F094C15AF42BB001739BD /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		376F094D15AF42BB001739BD /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
-		D278CB6A15AFA3FC00EDF62D /* halo.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = halo.mid; sourceTree = "<group>"; };
-		D278CB6F15AFA59000EDF62D /* bubble-shield.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bubble-shield.mp3"; sourceTree = "<group>"; };
-		D278CB7115AFA6A600EDF62D /* 24929.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 24929.mp3; sourceTree = "<group>"; };
 		D278CB7315AFAAAD00EDF62D /* BubbleShield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleShield.h; sourceTree = "<group>"; };
 		D278CB7415AFAAAD00EDF62D /* BubbleShield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleShield.m; sourceTree = "<group>"; };
 		D2D0AE1E15AF343A00518707 /* Halo:Wales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halo:Wales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -416,6 +416,10 @@
 				376F094D15AF42BB001739BD /* GameObject.m */,
 				3726215815AF87CA009997CC /* Sheep.h */,
 				3726215915AF87CA009997CC /* Sheep.m */,
+				37350F0015AFE1BA00233BE0 /* Banshee.h */,
+				37350F0115AFE1BA00233BE0 /* Banshee.m */,
+				37350F0415AFEDE800233BE0 /* FuelRod.h */,
+				37350F0515AFEDE900233BE0 /* FuelRod.m */,
 			);
 			name = "Game Objects";
 			sourceTree = "<group>";
@@ -975,6 +979,8 @@
 				376F094E15AF42BB001739BD /* GameObject.m in Sources */,
 				3726215A15AF87CA009997CC /* Sheep.m in Sources */,
 				D278CB7515AFAAAD00EDF62D /* BubbleShield.m in Sources */,
+				37350F0215AFE1BA00233BE0 /* Banshee.m in Sources */,
+				37350F0615AFEDE900233BE0 /* FuelRod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

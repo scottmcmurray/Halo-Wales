@@ -11,6 +11,8 @@
 #import "cocos2d.h"
 #import "MasterChief.h"
 #import "SimpleAudioEngine.h"
+#import "Banshee.h"
+#import "FuelRod.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer
@@ -21,6 +23,8 @@
     NSMutableArray *sheeps;
     CGPoint touchOrigin2;
 	BOOL gesturecontrol; 
+    Banshee *banshee;
+    FuelRod *fuelRod;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

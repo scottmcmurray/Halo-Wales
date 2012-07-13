@@ -46,9 +46,6 @@
 {
 	CGPoint touchOrigin = [touch locationInView:[touch view]];
 	touchOrigin2 = [[CCDirector sharedDirector] convertToGL:touchOrigin];
-    
-    [masterChief moveAlongGroundToPosition: touchOrigin.x];
-    [masterChief run];
 	
     return YES;
 }
@@ -82,7 +79,7 @@
             NSLog(@"down");
             gesturecontrol=YES;
 			
-			[BubbleShield deployBubbleOnNode:self atPoint:touchOrigin2.x];
+			[BubbleShield deployBubbleOnNode:self atPoint:masterChief.sprite.position.x];
         }
 		else if(touchOrigin2.y-touchOrigin3.y < -100)
 		{
@@ -94,6 +91,13 @@
 
 -(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    if( !gesturecontrol )
+    {
+        CGPoint touchOrigin = [touch locationInView:[touch view]];
+        [masterChief moveAlongGroundToPosition: touchOrigin.x];
+        [masterChief run];
+    }
+    
     gesturecontrol=NO;
 }
 
@@ -122,9 +126,18 @@
     
     [rightWall retain];
     
+    CCSprite *ground = [CCSprite spriteWithFile:@"1x1.gif"];
+    ground.scaleY = 60.0f;
+    ground.scaleX = size.width;
+    ground.position = ccp( 0, 0 );
+    ground.color = ccc3(56, 143, 69);
+    ground.opacity = 1;
+
+    [self addChild:ground];
+    
     masterChief = [MasterChief node];
     [masterChief setUp];
-    masterChief.sprite.position = ccp( 60.0f , size.height/2 );
+    masterChief.sprite.position = ccp( size.height/2, 60.0f );
     [self addChild:masterChief.sprite];
     
     [masterChief retain];
@@ -137,6 +150,19 @@
     
     sheeps = [[NSMutableArray arrayWithCapacity:0] retain];
     [sheeps addObject:sheep];
+    
+    banshee = [[Banshee node] retain];
+    [banshee setUp];
+    [banshee.sprite setRotation:20];
+    banshee.sprite.position = ccp( -50, size.height-50 );
+    [self addChild:banshee.sprite];
+    [banshee fly];
+    
+    fuelRod = [[FuelRod node] retain];
+    [fuelRod setUp];
+    fuelRod.sprite.position = ccp( 0, size.height-50 );
+    [self addChild:fuelRod.sprite];
+    [fuelRod fire];
 }
 
 
