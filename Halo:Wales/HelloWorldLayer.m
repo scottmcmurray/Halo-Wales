@@ -16,6 +16,7 @@
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
+
 +(CCScene *) scene
 {
 	// 'scene' is an autorelease object.
@@ -30,7 +31,12 @@
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
-	
+
+	CCSprite *whiteSolid = [[[CCSprite alloc] init] autorelease];
+	[whiteSolid setTextureRectInPixels:CGRectMake(0, 0, 480, 49) rotated:NO untrimmedSize:CGSizeMake(480, 49)];
+	whiteSolid.position = ccp(240, 23);
+	[whiteSolid setColor:ccc3(56, 143, 69)];
+	[scene addChild: whiteSolid];
 	// return the scene
 	return scene;
 }
