@@ -11,6 +11,8 @@
 
 @interface GameObject : CCNode 
 {
+    NSString *direction;
+    
     NSMutableDictionary *animations;
     NSMutableDictionary *actions;
     

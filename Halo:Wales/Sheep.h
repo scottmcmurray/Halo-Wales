@@ -14,9 +14,11 @@
     
 }
 
--(void) wander;
 -(void) roam;
 -(void) roamLeft;
 -(void) roamRight;
+
+-(void) checkIsWithinLeftBounds:(CGRect) bounds;
+-(void) checkIsWithinRightBounds:(CGRect) bounds;
 
 @end

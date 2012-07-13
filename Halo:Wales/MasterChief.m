@@ -13,6 +13,8 @@
 
 -(void) setUp
 {    
+    self->direction = @"Right";
+    
     spriteFrameFile = @"halo.plist";
     spriteBatchNodeFile = @"halo.png";
     spriteInitialFrameName = @"024.png";

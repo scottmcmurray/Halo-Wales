@@ -15,6 +15,9 @@
 @interface HelloWorldLayer : CCLayer
 {
 	MasterChief *masterChief;
+    CCSprite *leftWall;
+    CCSprite *rightWall;
+    NSMutableArray *sheeps;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

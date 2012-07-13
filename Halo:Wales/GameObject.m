@@ -16,7 +16,9 @@
 #pragma mark Setup and Register
 
 -(void) setUp
-{        
+{     
+    self->direction = @"Right";
+    
     #warning implement these values to set up your game objects
     spriteFrameFile = @"";
     spriteBatchNodeFile = @"";

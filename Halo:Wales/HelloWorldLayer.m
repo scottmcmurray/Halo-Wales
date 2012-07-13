@@ -54,8 +54,44 @@
 	//NSLog(@"touch (%g,%g)", location.x, location.y);
 	location = [[CCDirector sharedDirector] convertToGL:location];
 	NSLog(@"moved (%g,%g)", location.x, location.y);
-	
-	}
+}
+
+-(void) initAssets
+{
+    // ask director the the window size
+    CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    leftWall = [CCSprite spriteWithFile:@"1x1.gif"];
+    leftWall.scaleY = size.height;
+    leftWall.scaleX = 10;
+    leftWall.position = ccp( 0, 0 );
+    
+    [leftWall retain];
+    
+    rightWall = [CCSprite spriteWithFile:@"1x1.gif"];
+    rightWall.scaleY = size.height;
+    rightWall.scaleX = 10;
+    rightWall.position = ccp( size.width-10, 0 );
+    
+    [rightWall retain];
+    
+    masterChief = [MasterChief node];
+    [masterChief setUp];
+    masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
+    [self addChild:masterChief.sprite];
+    [masterChief run];
+    
+    [masterChief retain];
+    
+    Sheep *sheep = [[Sheep node] retain];
+    [sheep setUp];
+    sheep.sprite.position = ccp( size.width /3, 60.0f );
+    [self addChild:sheep.sprite];
+    [sheep roam];
+    
+    sheeps = [[NSMutableArray arrayWithCapacity:0] retain];
+    [sheeps addObject:sheep];
+}
 
 
 // on "init" you need to initialize your instance
@@ -66,25 +102,20 @@
 	if( (self=[super init])) 
     {
 		self.isTouchEnabled = YES;
-
-		// ask director the the window size
-		CGSize size = [[CCDirector sharedDirector] winSize];
-        
-        masterChief = [MasterChief node];
-        [masterChief setUp];
-        masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
-        [self addChild:masterChief.sprite];
-        [masterChief run];
-        
-		[masterChief retain];
-		
-        Sheep *sheep = [Sheep node];
-        [sheep setUp];
-        sheep.sprite.position = ccp( size.width /3 , size.height/3 );
-        [self addChild:sheep.sprite];
-        [sheep roamRight];
+        [self initAssets];
+        [self scheduleUpdate];
 	}
 	return self;
+}
+
+-(void) update:(ccTime) deltaTime
+{
+    for( int i = 0 ; i < [sheeps count] ; i++ )
+    {
+        Sheep *sheep = [sheeps objectAtIndex:i];
+        [sheep checkIsWithinLeftBounds:[leftWall boundingBox]];
+        [sheep checkIsWithinRightBounds:[rightWall boundingBox]];
+    }
 }
 
 // on "dealloc" you need to release all your retained objects
