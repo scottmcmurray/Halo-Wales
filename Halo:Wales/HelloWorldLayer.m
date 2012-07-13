@@ -80,7 +80,7 @@
             NSLog(@"down");
             gesturecontrol=YES;
 			
-			[BubbleShield deployBubbleOnNode:self atPoint:masterChief.sprite.position.x];
+			[bubbles addObject:[BubbleShield deployBubbleOnNode:self atPoint:masterChief.sprite.position.x]];
         }
 		else if(touchOrigin2.y-touchOrigin3.y < -100)
 		{
@@ -172,6 +172,9 @@
     fuelRod.sprite.flipX = YES;
     [self addChild:fuelRod.sprite];
     [fuelRod fire];
+    
+    bubbles = [NSMutableArray arrayWithCapacity:0];
+    [bubbles retain];
 }
 
 
@@ -204,6 +207,17 @@
         {
             [self removeChild:fuelRod.sprite cleanup:YES];
             [self removeChild:sheep.sprite cleanup:YES];
+        }
+    }
+    
+    for( int i = 0 ; i < [bubbles count] ; i++ )
+    {
+        BubbleShield *bubble = [bubbles objectAtIndex:i];
+        
+        if( CGRectIntersectsRect( [fuelRod.sprite boundingBox], [bubble.sprite boundingBox] ) )
+        {
+            [self removeChild:fuelRod.sprite cleanup:YES];
+            [self removeChild:bubble.sprite cleanup:YES];
         }
     }
     

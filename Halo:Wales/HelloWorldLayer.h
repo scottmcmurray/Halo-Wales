@@ -21,6 +21,7 @@
     CCSprite *leftWall;
     CCSprite *rightWall;
     NSMutableArray *sheeps;
+    NSMutableArray *bubbles;
     CGPoint touchOrigin2;
 	BOOL gesturecontrol; 
     Banshee *banshee;
