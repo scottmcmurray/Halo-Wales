@@ -151,12 +151,52 @@
     
     Sheep *sheep = [[Sheep node] retain];
     [sheep setUp];
-    sheep.sprite.position = ccp( size.width /3, 60.0f );
+    sheep.sprite.position = ccp( size.width /2, 60.0f );
     [self addChild:sheep.sprite];
     [sheep roam];
     
     sheeps = [[NSMutableArray arrayWithCapacity:0] retain];
     [sheeps addObject:sheep];
+    
+    Sheep *sheep2 = [[Sheep node] retain];
+    [sheep2 setUp];
+    sheep2.sprite.position = ccp( size.width /3, 60.0f );
+    [self addChild:sheep2.sprite];
+    [sheep2 roam];
+    
+    [sheeps addObject:sheep2];
+    
+    Sheep *sheep3 = [[Sheep node] retain];
+    [sheep3 setUp];
+    sheep3.sprite.position = ccp( size.width /4, 60.0f );
+    [self addChild:sheep3.sprite];
+    [sheep3 roam];
+    
+    [sheeps addObject:sheep3];
+    
+    Sheep *sheep4 = [[Sheep node] retain];
+    [sheep4 setUp];
+    sheep4.sprite.position = ccp( size.width /1, 60.0f );
+    [self addChild:sheep4.sprite];
+    [sheep4 roam];
+    
+    [sheeps addObject:sheep4];
+    
+    Sheep *sheep5 = [[Sheep node] retain];
+    [sheep5 setUp];
+    sheep5.sprite.position = ccp( size.width /1.5, 60.0f );
+    [self addChild:sheep5.sprite];
+    [sheep5 roam];
+    
+    [sheeps addObject:sheep5];
+    
+    Sheep *sheep6 = [[Sheep node] retain];
+    [sheep6 setUp];
+    sheep6.sprite.position = ccp( size.width /6, 60.0f );
+    [self addChild:sheep6.sprite];
+    [sheep6 roam];
+    
+    [sheeps addObject:sheep6];
     
     banshee = [[Banshee node] retain];
     [banshee setUp];
@@ -172,6 +212,25 @@
     fuelRod.sprite.flipX = YES;
     [self addChild:fuelRod.sprite];
     [fuelRod fire];
+    
+    float duration = 10.0;
+    
+    for( int i = 1 ; i < 10 ; i++ )
+    {
+        id delay = [CCDelayTime actionWithDuration:duration * i];
+        id move = [CCMoveTo actionWithDuration:0.0 position:ccp( -50, size.height-50 )];
+        id moveAgain = [CCMoveTo actionWithDuration:10.0 position:ccp( size.width + 50, size.height - 50 )];
+        id sequence = [CCSequence actions:delay, move, moveAgain, nil];
+        [banshee.sprite runAction:sequence];
+        
+        /*
+        id delayFuelRod = [CCDelayTime actionWithDuration:duration * i];
+        id moveFuelRod = [CCMoveTo actionWithDuration:0.0 position:ccp( 0, size.height-50 )];
+        id moveFuelRodAgain = [CCMoveTo actionWithDuration:10.0 position:ccp( 50, 60 )];
+        id FuelRodSequence = [CCSequence actions:delayFuelRod, moveFuelRod, moveFuelRodAgain, nil];
+        [fuelRod.sprite runAction:FuelRodSequence];
+         */
+    }
     
     bubbles = [NSMutableArray arrayWithCapacity:0];
     [bubbles retain];
@@ -206,6 +265,7 @@
         if( CGRectIntersectsRect( [fuelRod.sprite boundingBox], [sheep.sprite boundingBox] ) )
         {
             [self removeChild:fuelRod.sprite cleanup:YES];
+            fuelRod = nil;
             [self removeChild:sheep.sprite cleanup:YES];
         }
     }
@@ -214,9 +274,10 @@
     {
         BubbleShield *bubble = [bubbles objectAtIndex:i];
         
-        if( CGRectIntersectsRect( [fuelRod.sprite boundingBox], [bubble.sprite boundingBox] ) )
+        if( CGRectIntersectsRect( [fuelRod.sprite boundingBox], [bubble.sprite boundingBox] ) || (bubble.deployedTime + 15.8) < [[NSDate date] timeIntervalSince1970] )
         {
             [self removeChild:fuelRod.sprite cleanup:YES];
+            fuelRod = nil;
             [self removeChild:bubble.sprite cleanup:YES];
         }
     }
@@ -229,6 +290,7 @@
     if( CGRectIntersectsRect( [fuelRod.sprite boundingBox], [greenGrassySlopesOfTheBoyne boundingBox] ) )
     {
         [self removeChild:fuelRod.sprite cleanup:YES];
+        fuelRod = nil;
     }
 }
 

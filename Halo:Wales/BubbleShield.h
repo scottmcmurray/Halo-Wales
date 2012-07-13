@@ -11,6 +11,8 @@
 
 @interface BubbleShield : GameObject
 
+@property TimeValue deployedTime;
+
 +(BubbleShield *) deployBubbleOnNode:(CCNode *)node atPoint:(int)point;
 
 -(void) expand;

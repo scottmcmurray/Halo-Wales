@@ -11,6 +11,8 @@
 
 @implementation BubbleShield
 
+@synthesize deployedTime;
+
 -(void) setUp
 {    
     spriteFrameFile = @"halo.plist";
@@ -40,6 +42,8 @@
 	
 	[node addChild:bubbleShield.sprite];
     [bubbleShield expand];
+    
+    bubbleShield.deployedTime = [[NSDate date] timeIntervalSince1970];
     
     return bubbleShield;
 }

@@ -12,8 +12,15 @@
 @implementation Sheep
 
 -(void) setUp
-{    
-    self->direction = @"Left";
+{
+    if( arc4random_uniform(2) == 1 )
+    {
+        self->direction = @"Left";
+    }
+    else 
+    {
+        self->direction = @"Right";
+    }
     
     spriteFrameFile = @"halo.plist";
     spriteBatchNodeFile = @"halo.png";
@@ -47,6 +54,7 @@
 -(void) roamLeft
 {
     self->direction = @"Left";
+    
     [self setAnimationWithIdentifer:@"SheepWalkLeft"];
     
     float duration = ( self.sprite.position.x * ( 10.0 / [[CCDirector sharedDirector] winSize].width ) );
