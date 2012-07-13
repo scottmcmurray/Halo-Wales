@@ -21,7 +21,7 @@
     self->animations = [NSMutableDictionary dictionaryWithCapacity:1];
     
     CCAnimation *startBubble = [CCScaleTo actionWithDuration:0.0f scale:0.01f];
-	CCAnimation *expandBubbleAnimation = [CCScaleTo actionWithDuration:0.8f scale:1.0f];
+	CCAnimation *expandBubbleAnimation = [CCScaleTo actionWithDuration:0.8f scale:0.7f];
 	
 	[self->animations setObject:startBubble forKey:@"StartBubble"];
     [self->animations setObject:expandBubbleAnimation forKey:@"ExpandBubble"];
@@ -29,18 +29,23 @@
     [self registerAnimations];
 }
 
-+(void) deployBubble
++(void) deployBubbleOnNode:(CCNode *)node atPoint:(int)point
 {
 	[[SimpleAudioEngine sharedEngine] playEffect:@"bubble-shield.mp3"];
 	
-	CGSize size = [[CCDirector sharedDirector] winSize];
-	
 	BubbleShield *bubbleShield = [BubbleShield node];
 	[bubbleShield setUp];
-	bubbleShield.sprite.position = CGPointMake(0.0f, 0.0f);
+    bubbleShield.sprite.scale = 0.01f;
+	bubbleShield.sprite.position = ccp( point, 80.0f );
 	
-	[[HelloWorldLayer scene] addChild:bubbleShield.sprite];
-//	[bubbleShield run];
+	[node addChild:bubbleShield.sprite];
+    [bubbleShield expand];
+}
+
+-(void) expand
+{
+    id sequence = [CCSequence actions:[self->animations objectForKey:@"StartBubble"], [self->animations objectForKey:@"ExpandBubble"], nil];
+    [self.sprite runAction:sequence];
 }
 
 @end

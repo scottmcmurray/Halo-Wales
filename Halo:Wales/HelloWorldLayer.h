@@ -19,6 +19,8 @@
     CCSprite *leftWall;
     CCSprite *rightWall;
     NSMutableArray *sheeps;
+    CGPoint touchOrigin2;
+	BOOL gesturecontrol; 
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child

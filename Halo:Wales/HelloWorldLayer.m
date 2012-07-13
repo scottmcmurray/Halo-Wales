@@ -40,15 +40,15 @@
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:[touch view]];
 	location = [[CCDirector sharedDirector] convertToGL:location];
-	
-	[masterChief moveAlongGroundToPosition: location.x];
 }
 
 -(BOOL) ccTouchBegan:(UITouch *) touch withEvent: (UIEvent *) event
 {
-	
 	CGPoint touchOrigin = [touch locationInView:[touch view]];
 	touchOrigin2 = [[CCDirector sharedDirector] convertToGL:touchOrigin];
+    
+    [masterChief moveAlongGroundToPosition: touchOrigin.x];
+    [masterChief run];
 	
     return YES;
 }
@@ -61,10 +61,52 @@
 	NSLog(@"moved (%g,%g)", location.x, location.y);
 }
 
+-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+{
+	CGPoint touchOrigin = [touch locationInView:[touch view]];
+	CGPoint touchOrigin3 = [[CCDirector sharedDirector] convertToGL:touchOrigin];
+	
+    if(gesturecontrol==NO){
+        if(touchOrigin2.x-touchOrigin3.x > 100)
+		{
+            NSLog(@"left");
+            gesturecontrol=YES;
+        }
+		else if(touchOrigin2.x-touchOrigin3.x < -100)
+		{
+            NSLog(@"right");
+            gesturecontrol=YES;
+        }
+		else if(touchOrigin2.y-touchOrigin3.y > 100)
+		{
+            NSLog(@"down");
+            gesturecontrol=YES;
+			
+			[BubbleShield deployBubbleOnNode:self atPoint:touchOrigin2.x];
+        }
+		else if(touchOrigin2.y-touchOrigin3.y < -100)
+		{
+            NSLog(@"up");
+            gesturecontrol=YES;
+        }
+    }
+}
+
+-(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    gesturecontrol=NO;
+}
+
 -(void) initAssets
 {
     // ask director the the window size
     CGSize size = [[CCDirector sharedDirector] winSize];
+    
+    [[SimpleAudioEngine sharedEngine ] playBackgroundMusic:@"24929.mp3" loop:YES];
+    
+    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+    
+    gesturecontrol =NO;
     
     leftWall = [CCSprite spriteWithFile:@"1x1.gif"];
     leftWall.scaleY = size.height;
@@ -82,9 +124,8 @@
     
     masterChief = [MasterChief node];
     [masterChief setUp];
-    masterChief.sprite.position = ccp( size.width /2 , size.height/2 );
+    masterChief.sprite.position = ccp( 60.0f , size.height/2 );
     [self addChild:masterChief.sprite];
-    [masterChief run];
     
     [masterChief retain];
     
@@ -98,10 +139,6 @@
     [sheeps addObject:sheep];
 }
 
--(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
-{
-    gesturecontrol=NO;
-}
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -127,6 +164,11 @@
         Sheep *sheep = [sheeps objectAtIndex:i];
         [sheep checkIsWithinLeftBounds:[leftWall boundingBox]];
         [sheep checkIsWithinRightBounds:[rightWall boundingBox]];
+    }
+    
+    if( [masterChief checkForRunningAction:@"ObjectMovement"] )
+    {
+        [masterChief stopRunning];
     }
 }
 

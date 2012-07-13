@@ -33,5 +33,6 @@
 
 -(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
 -(void) setAnimationWithIdentifer:(NSString *)identifier;
+-(BOOL) checkForRunningAction:(NSString *)identifier;
 
 @end

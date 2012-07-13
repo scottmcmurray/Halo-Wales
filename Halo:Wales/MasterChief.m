@@ -20,12 +20,18 @@
     spriteInitialFrameName = @"024.png";
     [self registerSprite];
     
-    self->animations = [NSMutableDictionary dictionaryWithCapacity:1];
+    self->animations = [NSMutableDictionary dictionaryWithCapacity:0];
+    self->currentlyRunningActions = [NSMutableDictionary dictionaryWithCapacity:0];
+    [self->currentlyRunningActions retain];
     
     CCAnimation *runningAnimation = [self createAnimationFrom:24 to:33 with:@"%03i.png" andDelay:0.1f];
     [self->animations setObject:runningAnimation forKey:@"MasterChiefRunning"];
     
+    CCAnimation *stopRunningAnimation = [self createAnimationFrom:13 to:13 with:@"%03i.png" andDelay:0.1f];
+    [self->animations setObject:stopRunningAnimation forKey:@"MasterChiefStopRunning"];
+    
     [self registerAnimations];
+    [self->animations retain];
 }
 
 -(void) run
@@ -34,12 +40,8 @@
 }
 
 -(void) stopRunning
-{
-//	[self.sprite cleanup];
-	
-	//[[self->currentlyRunningActions objectForKey:@"MasterChiefRunning"] stop ];
-	
-//	[self.sprite stopActionByTag: [self->currentlyRunningActions objectForKey: @"MasterChiefRunning" ].tag];
+{    
+    [self setAnimationWithIdentifer:@"MasterChiefStopRunning"];
 }
 
 @end

@@ -18,6 +18,7 @@
 -(void) setUp
 {     
     self->direction = @"Right";
+    currentlyRunningActions = [NSMutableDictionary dictionaryWithCapacity:0];
     
     #warning implement these values to set up your game objects
     spriteFrameFile = @"";
@@ -64,12 +65,14 @@
 
 	id action = [CCSequence	actions:flipObject, moveObject, nil];
 	
-	[self.sprite runAction:action];
+	CCAction *runningAction = [self.sprite runAction:action];
+    [self->currentlyRunningActions setObject:runningAction forKey:@"ObjectMovement"];
+    [self->currentlyRunningActions retain];
 }
 
 -(void) moveAlongGroundToPosition: (CGFloat) xPos
 {	
-	[self moveToPosition:ccp( xPos, 60.0f )];
+	[self moveToPosition:ccp( xPos, 70.0f )];
 }
 
 -(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
@@ -96,6 +99,21 @@
 	CCAction *action = [self.sprite runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[self->animations objectForKey:identifier]]]];
 	
 	[self->currentlyRunningActions setObject:action forKey:identifier];
+    [self->currentlyRunningActions retain];
+}
+
+-(BOOL) checkForRunningAction:(NSString *)identifier
+{
+    CCAction *animation = [self->currentlyRunningActions objectForKey:identifier];
+    
+    if( animation.isDone )
+    {
+        return YES;
+    }
+    else 
+    {
+        return NO;
+    }
 }
 
 @end
