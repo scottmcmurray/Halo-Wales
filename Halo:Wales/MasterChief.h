@@ -16,5 +16,6 @@
 }
 
 -(void) run;
+-(void) stopRunning;
 
 @end

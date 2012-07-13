@@ -11,6 +11,7 @@
 #import "HelloWorldLayer.h"
 #import "MasterChief.h"
 #import "Sheep.h"
+#import "BubbleShield.h"
 
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
@@ -38,20 +39,24 @@
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:[touch view]];
-	//NSLog(@"touch (%g,%g)", location.x, location.y);
 	location = [[CCDirector sharedDirector] convertToGL:location];
-	NSLog(@"touch (%g,%g)", location.x, 60.0f);
 	
-	[masterChief moveToPosition: location];
-	//[masterChief moveToPosition: CGPointMake(10.0f, 10.0f)];
-	//CGSize size = [[CCDirector sharedDirector] winSize];
+	[masterChief moveAlongGroundToPosition: location.x];
+}
+
+-(BOOL) ccTouchBegan:(UITouch *) touch withEvent: (UIEvent *) event
+{
+	
+	CGPoint touchOrigin = [touch locationInView:[touch view]];
+	touchOrigin2 = [[CCDirector sharedDirector] convertToGL:touchOrigin];
+	
+    return YES;
 }
 
 -(void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView:[touch view]];
-	//NSLog(@"touch (%g,%g)", location.x, location.y);
 	location = [[CCDirector sharedDirector] convertToGL:location];
 	NSLog(@"moved (%g,%g)", location.x, location.y);
 }
@@ -93,6 +98,10 @@
     [sheeps addObject:sheep];
 }
 
+-(void)ccTouchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    gesturecontrol=NO;
+}
 
 // on "init" you need to initialize your instance
 -(id) init
@@ -101,10 +110,13 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) 
     {
+		[[SimpleAudioEngine sharedEngine] preloadEffect:@"bubble-shield.mp3"];
+
 		self.isTouchEnabled = YES;
         [self initAssets];
         [self scheduleUpdate];
 	}
+	
 	return self;
 }
 

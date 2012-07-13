@@ -48,7 +48,28 @@
 
 -(void) moveToPosition: (CGPoint) position
 {	
-	self.sprite.position = ccp( position.x, 60.0f );
+	BOOL flip;
+	
+	if( self.sprite.position.x > position.x )
+	{
+		flip = YES;
+	}
+	else 
+	{
+		flip = NO;
+	}
+	
+	id flipObject = [CCFlipX actionWithFlipX: flip];
+	id moveObject = [CCMoveTo actionWithDuration: 2.0f position:ccp(position.x, 60.0f)];
+
+	id action = [CCSequence	actions:flipObject, moveObject, nil];
+	
+	[self.sprite runAction:action];
+}
+
+-(void) moveAlongGroundToPosition: (CGFloat) xPos
+{	
+	[self moveToPosition:ccp( xPos, 60.0f )];
 }
 
 -(CCAnimation *) createAnimationFrom:(int)startFrame to:(int)endFrame with:(NSString *)frameNameFormat andDelay:(float)delay;
@@ -72,7 +93,9 @@
 
 -(void) setAnimationWithIdentifer:(NSString *)identifier
 {
-    [self.sprite runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[self->animations objectForKey:identifier]]]];
+	CCAction *action = [self.sprite runAction:[CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[self->animations objectForKey:identifier]]]];
+	
+	[self->currentlyRunningActions setObject:action forKey:identifier];
 }
 
 @end
