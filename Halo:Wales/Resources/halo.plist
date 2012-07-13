@@ -862,6 +862,19 @@
                 <key>sourceSize</key>
                 <string>{192,108}</string>
             </dict>
+            <key>067.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{196,267},{119,160}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{119,160}}</string>
+                <key>sourceSize</key>
+                <string>{119,160}</string>
+            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -870,9 +883,9 @@
             <key>realTextureFileName</key>
             <string>halo.png</string>
             <key>size</key>
-            <string>{503,377}</string>
+            <string>{503,429}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:43a978c39fc96ca48719bef96afb5494$</string>
+            <string>$TexturePacker:SmartUpdate:42a37a8242c36b3226a39d09aa9829d3$</string>
             <key>textureFileName</key>
             <string>halo.png</string>
         </dict>
