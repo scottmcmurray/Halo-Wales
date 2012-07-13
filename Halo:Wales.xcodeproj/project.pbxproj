@@ -13,9 +13,6 @@
 		3726215C15AFA18E009997CC /* 1x1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3726215B15AFA18E009997CC /* 1x1.gif */; };
 		376F094B15AF4213001739BD /* MasterChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094A15AF4213001739BD /* MasterChief.m */; };
 		376F094E15AF42BB001739BD /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094D15AF42BB001739BD /* GameObject.m */; };
-		D278CB6B15AFA3FC00EDF62D /* halo.mid in Resources */ = {isa = PBXBuildFile; fileRef = D278CB6A15AFA3FC00EDF62D /* halo.mid */; };
-		D278CB7015AFA59000EDF62D /* bubble-shield.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D278CB6F15AFA59000EDF62D /* bubble-shield.mp3 */; };
-		D278CB7215AFA6A600EDF62D /* 24929.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D278CB7115AFA6A600EDF62D /* 24929.mp3 */; };
 		D278CB7515AFAAAD00EDF62D /* BubbleShield.m in Sources */ = {isa = PBXBuildFile; fileRef = D278CB7415AFAAAD00EDF62D /* BubbleShield.m */; };
 		D2D0AE2315AF343A00518707 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2215AF343A00518707 /* QuartzCore.framework */; };
 		D2D0AE2515AF343A00518707 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2415AF343A00518707 /* OpenGLES.framework */; };
@@ -132,6 +129,8 @@
 		D2D0AF8615AF343C00518707 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8515AF343C00518707 /* AppDelegate.m */; };
 		D2D0AF8915AF343C00518707 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8815AF343C00518707 /* RootViewController.m */; };
 		D2D0AF8C15AF343C00518707 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D0AF8B15AF343C00518707 /* HelloWorldLayer.m */; };
+		D2FC17FA15AFF77200DA00E3 /* flag.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17F815AFF77200DA00E3 /* flag.plist */; };
+		D2FC17FB15AFF77200DA00E3 /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = D2FC17F915AFF77200DA00E3 /* flag.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,9 +143,6 @@
 		376F094A15AF4213001739BD /* MasterChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterChief.m; sourceTree = "<group>"; };
 		376F094C15AF42BB001739BD /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		376F094D15AF42BB001739BD /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
-		D278CB6A15AFA3FC00EDF62D /* halo.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = halo.mid; sourceTree = "<group>"; };
-		D278CB6F15AFA59000EDF62D /* bubble-shield.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bubble-shield.mp3"; sourceTree = "<group>"; };
-		D278CB7115AFA6A600EDF62D /* 24929.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 24929.mp3; sourceTree = "<group>"; };
 		D278CB7315AFAAAD00EDF62D /* BubbleShield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleShield.h; sourceTree = "<group>"; };
 		D278CB7415AFAAAD00EDF62D /* BubbleShield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleShield.m; sourceTree = "<group>"; };
 		D2D0AE1E15AF343A00518707 /* Halo:Wales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halo:Wales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -384,6 +380,8 @@
 		D2D0AF8A15AF343C00518707 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
 		D2D0AF8B15AF343C00518707 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		D2D0AF8D15AF343C00518707 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		D2FC17F815AFF77200DA00E3 /* flag.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = flag.plist; path = Resources/flag.plist; sourceTree = "<group>"; };
+		D2FC17F915AFF77200DA00E3 /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = flag.png; path = Resources/flag.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,6 +471,8 @@
 		D2D0AE3315AF343A00518707 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2FC17F815AFF77200DA00E3 /* flag.plist */,
+				D2FC17F915AFF77200DA00E3 /* flag.png */,
 				3726215B15AFA18E009997CC /* 1x1.gif */,
 				3726214215AF6829009997CC /* halo.plist */,
 				3726214315AF6829009997CC /* halo.png */,
@@ -863,6 +863,8 @@
 				3726214415AF6829009997CC /* halo.plist in Resources */,
 				3726214515AF6829009997CC /* halo.png in Resources */,
 				3726215C15AFA18E009997CC /* 1x1.gif in Resources */,
+				D2FC17FA15AFF77200DA00E3 /* flag.plist in Resources */,
+				D2FC17FB15AFF77200DA00E3 /* flag.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
