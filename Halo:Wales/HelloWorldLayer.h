@@ -10,14 +10,18 @@
 // When you import this file, you import all the cocos2d classes
 #import "cocos2d.h"
 #import "MasterChief.h"
+#import "SimpleAudioEngine.h"
 
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer
 {
 	MasterChief *masterChief;
+	CGPoint touchOrigin2;
+	BOOL gesturecontrol;
 }
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
+
 
 @end

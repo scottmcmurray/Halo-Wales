@@ -12,6 +12,10 @@
 		3726215A15AF87CA009997CC /* Sheep.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726215915AF87CA009997CC /* Sheep.m */; };
 		376F094B15AF4213001739BD /* MasterChief.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094A15AF4213001739BD /* MasterChief.m */; };
 		376F094E15AF42BB001739BD /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 376F094D15AF42BB001739BD /* GameObject.m */; };
+		D278CB6B15AFA3FC00EDF62D /* halo.mid in Resources */ = {isa = PBXBuildFile; fileRef = D278CB6A15AFA3FC00EDF62D /* halo.mid */; };
+		D278CB7015AFA59000EDF62D /* bubble-shield.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D278CB6F15AFA59000EDF62D /* bubble-shield.mp3 */; };
+		D278CB7215AFA6A600EDF62D /* 24929.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D278CB7115AFA6A600EDF62D /* 24929.mp3 */; };
+		D278CB7515AFAAAD00EDF62D /* BubbleShield.m in Sources */ = {isa = PBXBuildFile; fileRef = D278CB7415AFAAAD00EDF62D /* BubbleShield.m */; };
 		D2D0AE2315AF343A00518707 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2215AF343A00518707 /* QuartzCore.framework */; };
 		D2D0AE2515AF343A00518707 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2415AF343A00518707 /* OpenGLES.framework */; };
 		D2D0AE2715AF343A00518707 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D0AE2615AF343A00518707 /* OpenAL.framework */; };
@@ -138,6 +142,11 @@
 		376F094A15AF4213001739BD /* MasterChief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterChief.m; sourceTree = "<group>"; };
 		376F094C15AF42BB001739BD /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		376F094D15AF42BB001739BD /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		D278CB6A15AFA3FC00EDF62D /* halo.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = halo.mid; sourceTree = "<group>"; };
+		D278CB6F15AFA59000EDF62D /* bubble-shield.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bubble-shield.mp3"; sourceTree = "<group>"; };
+		D278CB7115AFA6A600EDF62D /* 24929.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 24929.mp3; sourceTree = "<group>"; };
+		D278CB7315AFAAAD00EDF62D /* BubbleShield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleShield.h; sourceTree = "<group>"; };
+		D278CB7415AFAAAD00EDF62D /* BubbleShield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleShield.m; sourceTree = "<group>"; };
 		D2D0AE1E15AF343A00518707 /* Halo:Wales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Halo:Wales.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2D0AE2215AF343A00518707 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D2D0AE2415AF343A00518707 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -398,6 +407,8 @@
 			isa = PBXGroup;
 			children = (
 				376F094915AF4213001739BD /* MasterChief.h */,
+				D278CB7315AFAAAD00EDF62D /* BubbleShield.h */,
+				D278CB7415AFAAAD00EDF62D /* BubbleShield.m */,
 				376F094A15AF4213001739BD /* MasterChief.m */,
 				376F094C15AF42BB001739BD /* GameObject.h */,
 				376F094D15AF42BB001739BD /* GameObject.m */,
@@ -460,6 +471,9 @@
 		D2D0AE3315AF343A00518707 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D278CB7115AFA6A600EDF62D /* 24929.mp3 */,
+				D278CB6F15AFA59000EDF62D /* bubble-shield.mp3 */,
+				D278CB6A15AFA3FC00EDF62D /* halo.mid */,
 				3726214215AF6829009997CC /* halo.plist */,
 				3726214315AF6829009997CC /* halo.png */,
 				D2D0AE3415AF343A00518707 /* Default.png */,
@@ -848,6 +862,9 @@
 				D2D0AE4615AF343A00518707 /* iTunesArtwork in Resources */,
 				3726214415AF6829009997CC /* halo.plist in Resources */,
 				3726214515AF6829009997CC /* halo.png in Resources */,
+				D278CB6B15AFA3FC00EDF62D /* halo.mid in Resources */,
+				D278CB7015AFA59000EDF62D /* bubble-shield.mp3 in Resources */,
+				D278CB7215AFA6A600EDF62D /* 24929.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +976,7 @@
 				376F094B15AF4213001739BD /* MasterChief.m in Sources */,
 				376F094E15AF42BB001739BD /* GameObject.m in Sources */,
 				3726215A15AF87CA009997CC /* Sheep.m in Sources */,
+				D278CB7515AFAAAD00EDF62D /* BubbleShield.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
